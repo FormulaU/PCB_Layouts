@@ -10961,6 +10961,7 @@ Based on the following sources:
 <text x="185.42" y="66.04" size="1.778" layer="91">TO SHUTDOWN CIRCUIT</text>
 <text x="177.8" y="71.12" size="1.778" layer="91">VOLTAGE IN</text>
 <text x="182.88" y="58.42" size="1.778" layer="91">GROUND</text>
+<text x="147.32" y="88.9" size="1.778" layer="91">1A fuse</text>
 </plain>
 <instances>
 <instance part="IC1" gate="A" x="68.58" y="93.98"/>

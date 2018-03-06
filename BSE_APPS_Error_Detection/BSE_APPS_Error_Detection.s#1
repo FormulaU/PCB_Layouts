@@ -11123,7 +11123,6 @@ W = angled&lt;p&gt;
 <part name="F1" library="fuse" library_urn="urn:adsk.eagle:library:233" deviceset="FUSE" device="BLANK_5X20MM" package3d_urn="urn:adsk.eagle:package:14079/1"/>
 <part name="APPS" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device=""/>
 <part name="R1-APPS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-TRIMM" device="3006P" package3d_urn="urn:adsk.eagle:package:23758/1"/>
-<part name="R2-BSE" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-TRIMM" device="43P" package3d_urn="urn:adsk.eagle:package:23756/1"/>
 <part name="R4-APPS-BELOW" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-TRIMM" device="3006P" package3d_urn="urn:adsk.eagle:package:23758/1"/>
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:25939/1" value="220"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
@@ -11139,6 +11138,7 @@ W = angled&lt;p&gt;
 <part name="SV1" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE09W" device="" package3d_urn="urn:adsk.eagle:package:8199/1"/>
 <part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:25939/1" value="30k"/>
 <part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:25939/1" value="30k"/>
+<part name="R2-BSE" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-TRIMM" device="3006P" package3d_urn="urn:adsk.eagle:package:23758/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -11158,7 +11158,6 @@ W = angled&lt;p&gt;
 <instance part="APPS" gate="-2" x="60.96" y="60.96"/>
 <instance part="APPS" gate="-3" x="60.96" y="58.42"/>
 <instance part="R1-APPS" gate="G$1" x="22.86" y="43.18"/>
-<instance part="R2-BSE" gate="G$1" x="50.8" y="91.44"/>
 <instance part="R4-APPS-BELOW" gate="G$1" x="121.92" y="119.38"/>
 <instance part="R5" gate="G$1" x="142.24" y="53.34" rot="R90"/>
 <instance part="LED1" gate="G$1" x="142.24" y="38.1"/>
@@ -11178,6 +11177,7 @@ W = angled&lt;p&gt;
 <instance part="SV1" gate="G$1" x="185.42" y="114.3"/>
 <instance part="R1" gate="G$1" x="152.4" y="45.72" rot="R90"/>
 <instance part="R3" gate="G$1" x="134.62" y="45.72" rot="R90"/>
+<instance part="R2-BSE" gate="G$1" x="50.8" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -11217,9 +11217,9 @@ W = angled&lt;p&gt;
 <label x="55.88" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R2-BSE" gate="G$1" pin="A"/>
 <wire x1="50.8" y1="86.36" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
 <label x="50.8" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="R2-BSE" gate="G$1" pin="A"/>
 </segment>
 <segment>
 <pinref part="R4-APPS-BELOW" gate="G$1" pin="A"/>
@@ -11324,10 +11324,9 @@ W = angled&lt;p&gt;
 <label x="22.86" y="73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R2-BSE" gate="G$1" pin="E"/>
 <wire x1="50.8" y1="106.68" x2="50.8" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="91.44" x2="50.8" y2="96.52" width="0.1524" layer="91"/>
 <label x="50.8" y="106.68" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="R2-BSE" gate="G$1" pin="E"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
@@ -11366,9 +11365,9 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="R2-BSE" gate="G$1" pin="S"/>
 <pinref part="IC1" gate="A" pin="-IN"/>
 <wire x1="55.88" y1="91.44" x2="60.96" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R2-BSE" gate="G$1" pin="S"/>
 </segment>
 </net>
 <net name="N$10" class="0">

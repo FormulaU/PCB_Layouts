@@ -69,6 +69,9 @@
 <hole x="96.52" y="77.47" drill="1"/>
 <hole x="97.79" y="2.54" drill="1"/>
 <hole x="2.54" y="2.54" drill="1"/>
+<text x="78.74" y="27.94" size="1.778" layer="51">Time Delay Pot</text>
+<text x="82.55" y="20.32" size="1.778" layer="51">BSE POT</text>
+<text x="78.74" y="12.7" size="1.778" layer="51">CURRENT POT</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">

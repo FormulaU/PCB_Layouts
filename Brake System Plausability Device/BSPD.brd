@@ -72,6 +72,8 @@
 <text x="83.82" y="27.94" size="1.016" layer="25">TIMING POT</text>
 <text x="81.28" y="20.32" size="1.016" layer="25">BSE POT</text>
 <text x="90.17" y="12.7" size="1.016" layer="25">CURRENT POT</text>
+<dimension x1="0" y1="80" x2="0" y2="0" x3="-16.51" y3="40" textsize="1.778" layer="1"/>
+<dimension x1="100" y1="80" x2="0" y2="80" x3="50" y3="82.55" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">

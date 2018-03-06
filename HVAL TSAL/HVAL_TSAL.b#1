@@ -70,8 +70,8 @@
 <wire x1="87.63" y1="25.4" x2="87.63" y2="44.45" width="0.1524" layer="46"/>
 <text x="6.35" y="76.2" size="1.778" layer="25">Blinky</text>
 <text x="83.82" y="74.93" size="1.778" layer="25">Steady</text>
-<text x="5.08" y="15.24" size="6.4516" layer="25">HIGH</text>
-<text x="62.23" y="15.24" size="6.4516" layer="25">VOLTAGE</text>
+<text x="7.62" y="12.7" size="6.4516" layer="25">HIGH</text>
+<text x="60.96" y="12.7" size="6.4516" layer="25">VOLTAGE</text>
 <text x="1.27" y="49.53" size="6.4516" layer="25">LOW</text>
 <text x="54.61" y="52.07" size="6.4516" layer="25">VOLTAGE</text>
 </plain>

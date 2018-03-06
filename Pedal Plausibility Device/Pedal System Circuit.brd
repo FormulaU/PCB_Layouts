@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.1">
+<eagle version="8.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -68,6 +68,8 @@
 <hole x="92.71" y="60.96" drill="1"/>
 <hole x="91.44" y="8.89" drill="1"/>
 <hole x="17.78" y="8.89" drill="1"/>
+<dimension x1="15.24" y1="63.49" x2="15.24" y2="6.35" x3="3.81" y3="34.92" textsize="1.778" layer="1"/>
+<dimension x1="96.19" y1="63.49" x2="15.24" y2="63.49" x3="55.715" y3="66.04" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
 <library name="fuse" urn="urn:adsk.eagle:library:233">
@@ -1634,6 +1636,7 @@ design rules under a new name.</description>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
