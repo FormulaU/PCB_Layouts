@@ -11432,7 +11432,7 @@ W = angled&lt;p&gt;
 <clearance class="0" value="0.205"/>
 </class>
 <class number="1" name="High Voltage" width="0.635" drill="0.162559375">
-<clearance class="1" value="0.205"/>
+<clearance class="1" value="0.5"/>
 </class>
 </classes>
 <parts>
@@ -11449,7 +11449,6 @@ W = angled&lt;p&gt;
 <part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="0309/12" package3d_urn="urn:adsk.eagle:package:26089/1" value="100"/>
 <part name="D5" library="display-hp" library_urn="urn:adsk.eagle:library:212" deviceset="HLMP6" device="" package3d_urn="urn:adsk.eagle:package:12992/1"/>
 <part name="D6" library="display-hp" library_urn="urn:adsk.eagle:library:212" deviceset="HLMP6" device="" package3d_urn="urn:adsk.eagle:package:12992/1"/>
-<part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="102-043X133" package3d_urn="urn:adsk.eagle:package:23647/1"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="150-091X182" package3d_urn="urn:adsk.eagle:package:23659/1"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="075-032X103" package3d_urn="urn:adsk.eagle:package:23646/1"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="050-055X075" package3d_urn="urn:adsk.eagle:package:23642/1"/>
@@ -11485,7 +11484,6 @@ W = angled&lt;p&gt;
 <attribute name="VALUE" x="104.521" y="-57.404" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="D6" gate="A" x="114.3" y="-2.54"/>
-<instance part="C4" gate="G$1" x="-2.54" y="-27.94" rot="R90"/>
 <instance part="C3" gate="G$1" x="-33.02" y="2.54"/>
 <instance part="C5" gate="G$1" x="-22.86" y="2.54"/>
 <instance part="C6" gate="G$1" x="22.86" y="2.54"/>
@@ -11512,13 +11510,8 @@ W = angled&lt;p&gt;
 <pinref part="IN" gate="-1" pin="S"/>
 <wire x1="-50.8" y1="-2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="10-IN-"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-33.02" y1="-2.54" x2="-27.94" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-2.54" x2="-22.86" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="-2.54" x2="-22.86" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="-2.54" x2="-17.78" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="-27.94" x2="-27.94" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-27.94" x2="-27.94" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="-27.94" y="-2.54"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <junction x="-33.02" y="-2.54"/>
 <pinref part="C5" gate="G$1" pin="2"/>
@@ -11647,16 +11640,11 @@ W = angled&lt;p&gt;
 <wire x1="109.22" y1="-45.72" x2="109.22" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LOW_SIDE_NEG" class="1">
+<net name="LOW_SIDE_NEG" class="0">
 <segment>
 <pinref part="IC1" gate="A" pin="GND"/>
 <pinref part="U$1" gate="G$1" pin="7-OUT-"/>
-<wire x1="17.78" y1="-2.54" x2="20.32" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="2.54" y1="-27.94" x2="20.32" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="-27.94" x2="20.32" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="20.32" y="-2.54"/>
-<wire x1="20.32" y1="-2.54" x2="22.86" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-2.54" x2="22.86" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <junction x="22.86" y="-2.54"/>
 <wire x1="22.86" y1="-2.54" x2="22.86" y2="-66.04" width="0.1524" layer="91"/>

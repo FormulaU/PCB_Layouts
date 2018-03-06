@@ -11368,6 +11368,7 @@ Wickmann</description>
 <sheets>
 <sheet>
 <plain>
+<text x="-7.62" y="7.62" size="1.778" layer="91">EPM1205SJ</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
@@ -11542,7 +11543,7 @@ Wickmann</description>
 <wire x1="109.22" y1="-45.72" x2="109.22" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="N$4" class="1">
 <segment>
 <pinref part="IC1" gate="A" pin="GND"/>
 <pinref part="U$1" gate="G$1" pin="7-OUT-"/>
