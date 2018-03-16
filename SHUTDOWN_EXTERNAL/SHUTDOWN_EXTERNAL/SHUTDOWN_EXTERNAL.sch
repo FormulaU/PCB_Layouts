@@ -7570,6 +7570,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="TSMS" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0411/15" package3d_urn="urn:adsk.eagle:package:23568/1" value="1.2k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0411/15" package3d_urn="urn:adsk.eagle:package:23568/1" value="1.2k"/>
+<part name="INTERLOCKS" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -7581,6 +7582,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <vertex x="-30.48" y="66.04"/>
 </polygon>
 <text x="-27.94" y="73.66" size="1.778" layer="88">SHUTDOWN CIRCUIT</text>
+<text x="154.94" y="5.08" size="3.81" layer="91">Precharge Circuit</text>
+<text x="195.58" y="48.26" size="3.81" layer="91">Discharge Circuit</text>
 </plain>
 <instances>
 <instance part="AIRS-1" gate="1" x="33.02" y="2.54"/>
@@ -7592,81 +7595,109 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <attribute name="NAME" x="-20.955" y="47.625" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-12.7" y="50.8" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="MOTOR_CONTROLLER" gate="G$1" x="88.9" y="60.96" rot="R270"/>
-<instance part="DISCHARGE_RELAY" gate="1" x="180.34" y="30.48"/>
-<instance part="DISCHARGE_RELAY" gate="2" x="165.1" y="30.48" rot="R180"/>
-<instance part="BRAKE_OVER_TRAVEL" gate="G$1" x="0" y="93.98" smashed="yes" rot="R90">
-<attribute name="NAME" x="10.16" y="91.44" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="2.54" y="98.425" size="1.778" layer="96" rot="R180"/>
+<instance part="MOTOR_CONTROLLER" gate="G$1" x="88.9" y="60.96" smashed="yes" rot="R270">
+<attribute name="NAME" x="79.375" y="54.864" size="1.778" layer="95"/>
+<attribute name="VALUE" x="84.709" y="65.024" size="1.778" layer="96"/>
 </instance>
-<instance part="INERTIA" gate="G$1" x="22.86" y="93.98" rot="R90"/>
-<instance part="SHUTDOWN-1" gate="G$1" x="43.18" y="93.98" rot="R90"/>
-<instance part="SHUTDOWN-2" gate="G$1" x="60.96" y="93.98" rot="R90"/>
-<instance part="SHUTDOWN-3" gate="G$1" x="81.28" y="93.98" rot="R90"/>
-<instance part="GLVMS" gate="G$1" x="99.06" y="93.98" rot="R90"/>
-<instance part="TSMS" gate="G$1" x="116.84" y="93.98" rot="R90"/>
+<instance part="DISCHARGE_RELAY" gate="1" x="180.34" y="35.56"/>
+<instance part="DISCHARGE_RELAY" gate="2" x="165.1" y="35.56" rot="R180"/>
+<instance part="BRAKE_OVER_TRAVEL" gate="G$1" x="15.24" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="25.4" y="91.44" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="17.78" y="98.425" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="INERTIA" gate="G$1" x="38.1" y="93.98" rot="R90"/>
+<instance part="SHUTDOWN-1" gate="G$1" x="58.42" y="93.98" rot="R90"/>
+<instance part="SHUTDOWN-2" gate="G$1" x="76.2" y="93.98" rot="R90"/>
+<instance part="SHUTDOWN-3" gate="G$1" x="96.52" y="93.98" rot="R90"/>
+<instance part="GLVMS" gate="G$1" x="114.3" y="93.98" rot="R90"/>
+<instance part="TSMS" gate="G$1" x="132.08" y="93.98" rot="R90"/>
 <instance part="R1" gate="G$1" x="109.22" y="15.24" rot="R180"/>
-<instance part="R2" gate="G$1" x="86.36" y="25.4" rot="R180"/>
+<instance part="R2" gate="G$1" x="86.36" y="30.48" smashed="yes" rot="R180">
+<attribute name="NAME" x="82.55" y="34.0614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="90.17" y="33.782" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="INTERLOCKS" gate="G$1" x="-12.7" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="-7.62" y="91.44" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-10.16" y="98.425" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
+<bus name="B$1">
+<segment>
+<wire x1="38.1" y1="45.72" x2="208.28" y2="45.72" width="0.762" layer="92"/>
+<wire x1="208.28" y1="45.72" x2="208.28" y2="20.32" width="0.762" layer="92"/>
+<wire x1="208.28" y1="20.32" x2="157.48" y2="20.32" width="0.762" layer="92"/>
+<wire x1="157.48" y1="20.32" x2="157.48" y2="27.94" width="0.762" layer="92"/>
+<wire x1="157.48" y1="27.94" x2="38.1" y2="27.94" width="0.762" layer="92"/>
+<wire x1="38.1" y1="27.94" x2="38.1" y2="45.72" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$2">
+<segment>
+<wire x1="99.06" y1="-5.08" x2="99.06" y2="22.86" width="0.762" layer="92"/>
+<wire x1="99.06" y1="22.86" x2="152.4" y2="22.86" width="0.762" layer="92"/>
+<wire x1="152.4" y1="22.86" x2="152.4" y2="-5.08" width="0.762" layer="92"/>
+<wire x1="152.4" y1="-5.08" x2="99.06" y2="-5.08" width="0.762" layer="92"/>
+</segment>
+</bus>
 </busses>
 <nets>
 <net name="TO_BTNS" class="0">
 <segment>
-<pinref part="BRAKE_OVER_TRAVEL" gate="G$1" pin="2"/>
-<wire x1="-7.62" y1="93.98" x2="-27.94" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="93.98" x2="-27.94" y2="83.82" width="0.1524" layer="91"/>
 <label x="-27.94" y="93.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="INTERLOCKS" gate="G$1" pin="2"/>
+<wire x1="-20.32" y1="93.98" x2="-27.94" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="BRAKE_OVER_TRAVEL" gate="G$1" pin="1"/>
 <pinref part="INERTIA" gate="G$1" pin="2"/>
-<wire x1="5.08" y1="93.98" x2="15.24" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="93.98" x2="30.48" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="INERTIA" gate="G$1" pin="1"/>
 <pinref part="SHUTDOWN-1" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="93.98" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="SHUTDOWN-1" gate="G$1" pin="1"/>
 <pinref part="SHUTDOWN-2" gate="G$1" pin="2"/>
-<wire x1="48.26" y1="93.98" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="93.98" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="SHUTDOWN-2" gate="G$1" pin="1"/>
 <pinref part="SHUTDOWN-3" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="93.98" x2="88.9" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="SHUTDOWN-3" gate="G$1" pin="1"/>
 <pinref part="GLVMS" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="93.98" x2="91.44" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="93.98" x2="106.68" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="GLVMS" gate="G$1" pin="1"/>
 <pinref part="TSMS" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="93.98" x2="109.22" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FROM_BTNS" class="0">
 <segment>
 <pinref part="TSMS" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="93.98" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
-<label x="121.92" y="83.82" size="1.778" layer="95" xref="yes"/>
+<wire x1="137.16" y1="93.98" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
+<label x="137.16" y="83.82" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FROM_AIRS-1" class="0">
@@ -7680,7 +7711,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="33.02" y="-7.62" size="1.778" layer="95" rot="R270" xref="yes"/>
 <pinref part="DISCHARGE_RELAY" gate="1" pin="2"/>
 <wire x1="33.02" y1="-7.62" x2="180.34" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="-7.62" x2="180.34" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-7.62" x2="180.34" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TO_AIRS-1" class="0">
@@ -7690,7 +7721,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="33.02" y1="81.28" x2="-2.54" y2="81.28" width="0.1524" layer="91"/>
 <junction x="33.02" y="81.28"/>
 <pinref part="DISCHARGE_RELAY" gate="1" pin="1"/>
-<wire x1="180.34" y1="35.56" x2="180.34" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="40.64" x2="180.34" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="81.28" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
 <label x="180.34" y="81.28" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -7746,7 +7777,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="114.3" y1="15.24" x2="137.16" y2="15.24" width="0.1524" layer="91"/>
 <junction x="137.16" y="15.24"/>
 <pinref part="DISCHARGE_RELAY" gate="2" pin="P"/>
-<wire x1="165.1" y1="33.02" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="38.1" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
 <junction x="137.16" y="60.96"/>
 </segment>
@@ -7756,18 +7787,18 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="MOTOR_CONTROLLER" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="60.96" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="AIRS-1" gate="2" pin="P"/>
-<wire x1="48.26" y1="60.96" x2="48.26" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="60.96" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="48.26" y1="25.4" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="25.4" x2="48.26" y2="25.4" width="0.1524" layer="91"/>
-<junction x="48.26" y="25.4"/>
+<wire x1="48.26" y1="30.48" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="30.48" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
+<junction x="48.26" y="30.48"/>
 </segment>
 </net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="DISCHARGE_RELAY" gate="2" pin="O"/>
-<wire x1="91.44" y1="25.4" x2="160.02" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="30.48" x2="160.02" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7777,6 +7808,21 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="-17.78" y1="40.64" x2="-35.56" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="40.64" x2="-35.56" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="71.12" x2="-30.48" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="INTERLOCKS" gate="G$1" pin="1"/>
+<pinref part="BRAKE_OVER_TRAVEL" gate="G$1" pin="2"/>
+<wire x1="-7.62" y1="93.98" x2="7.62" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<wire x1="99.06" y1="-5.08" x2="99.06" y2="22.86" width="0.508" layer="91" style="longdash"/>
+<wire x1="99.06" y1="22.86" x2="152.4" y2="22.86" width="0.508" layer="91" style="longdash"/>
+<wire x1="152.4" y1="22.86" x2="152.4" y2="-5.08" width="0.508" layer="91" style="longdash"/>
+<wire x1="152.4" y1="-5.08" x2="99.06" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

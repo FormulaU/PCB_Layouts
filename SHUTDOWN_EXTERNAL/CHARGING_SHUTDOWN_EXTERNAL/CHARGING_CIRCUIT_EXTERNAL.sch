@@ -2200,8 +2200,9 @@ Wickmann</description>
 <part name="ACCUMULATOR" library="battery" library_urn="urn:adsk.eagle:library:109" deviceset="AB9V" device="" package3d_urn="urn:adsk.eagle:package:4600/1" value="300VDC"/>
 <part name="EXTERNAL_POWER_SUPPLY" library="battery" library_urn="urn:adsk.eagle:library:109" deviceset="B2430UNI" device="" package3d_urn="urn:adsk.eagle:package:4603/1" value="12VDC"/>
 <part name="CHARGING_SHUTDOWN_BTN" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
-<part name="CHARGER" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="CURRENT" device=""/>
+<part name="CL21H03-8011" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="CURRENT" device="" value="Isolated 3kW EV Battery Charger"/>
 <part name="F1" library="fuse" library_urn="urn:adsk.eagle:library:233" deviceset="FUSE" device="BLANK_5X20MM" package3d_urn="urn:adsk.eagle:package:14079/1"/>
+<part name="CONNECTION_INTERLOCKS" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -2229,11 +2230,15 @@ Wickmann</description>
 <attribute name="NAME" x="66.04" y="99.06" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="55.88" y="106.045" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CHARGER" gate="G$1" x="76.2" y="48.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="88.392" y="56.896" size="1.778" layer="94" rot="R180" align="center-left"/>
-<attribute name="VALUE" x="80.518" y="54.356" size="1.778" layer="94" rot="R90" align="center-left"/>
+<instance part="CL21H03-8011" gate="G$1" x="76.2" y="48.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="83.312" y="56.896" size="1.778" layer="94" rot="R180" align="center-left"/>
+<attribute name="VALUE" x="95.758" y="39.116" size="1.778" layer="94" rot="R180" align="center-left"/>
 </instance>
 <instance part="F1" gate="G$1" x="109.22" y="48.26"/>
+<instance part="CONNECTION_INTERLOCKS" gate="G$1" x="96.52" y="101.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="109.22" y="99.06" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="99.06" y="106.045" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -2250,9 +2255,9 @@ Wickmann</description>
 <segment>
 <wire x1="132.08" y1="91.44" x2="7.62" y2="91.44" width="0.1524" layer="91"/>
 <label x="132.08" y="91.44" size="1.778" layer="95" xref="yes"/>
-<pinref part="CHARGING_SHUTDOWN_BTN" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="101.6" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="CONNECTION_INTERLOCKS" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FROM_AIRS-1" class="0">
@@ -2326,7 +2331,7 @@ Wickmann</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="CHARGER" gate="G$1" pin="+"/>
+<pinref part="CL21H03-8011" gate="G$1" pin="+"/>
 <pinref part="AIRS-1" gate="2" pin="P"/>
 <wire x1="76.2" y1="48.26" x2="58.42" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="48.26" x2="58.42" y2="12.7" width="0.1524" layer="91"/>
@@ -2335,8 +2340,15 @@ Wickmann</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="F1" gate="G$1" pin="1"/>
-<pinref part="CHARGER" gate="G$1" pin="-"/>
+<pinref part="CL21H03-8011" gate="G$1" pin="-"/>
 <wire x1="104.14" y1="48.26" x2="88.9" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="CHARGING_SHUTDOWN_BTN" gate="G$1" pin="1"/>
+<pinref part="CONNECTION_INTERLOCKS" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="101.6" x2="88.9" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -8061,7 +8061,7 @@ Wickmann</description>
 <instance part="IC2" gate="B" x="111.76" y="76.2"/>
 <instance part="IC3" gate="A" x="149.86" y="96.52"/>
 <instance part="R1" gate="G$1" x="55.88" y="73.66" rot="R90"/>
-<instance part="R3" gate="G$1" x="93.98" y="71.12"/>
+<instance part="R3" gate="G$1" x="93.98" y="73.66"/>
 <instance part="P+1" gate="VCC" x="66.04" y="144.78"/>
 <instance part="P+2" gate="VCC" x="22.86" y="137.16"/>
 <instance part="GND1" gate="1" x="48.26" y="129.54"/>
@@ -8201,7 +8201,7 @@ Wickmann</description>
 <segment>
 <pinref part="R3" gate="G$1" pin="A"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="93.98" y1="66.04" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="68.58" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -8242,15 +8242,14 @@ Wickmann</description>
 <wire x1="93.98" y1="127" x2="101.6" y2="127" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="129.54" x2="93.98" y2="127" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="E"/>
-<wire x1="93.98" y1="127" x2="93.98" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="127" x2="93.98" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="S"/>
 <pinref part="IC2" gate="B" pin="-IN"/>
-<wire x1="99.06" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="71.12" x2="104.14" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="73.66" x2="104.14" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">

@@ -7995,6 +7995,7 @@ Wickmann</description>
 <sheets>
 <sheet>
 <plain>
+<text x="50.8" y="144.78" size="1.778" layer="91">0.5A fuse</text>
 </plain>
 <instances>
 <instance part="R5" gate="G$1" x="68.58" y="81.28"/>

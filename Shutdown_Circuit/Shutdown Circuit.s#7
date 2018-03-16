@@ -9410,12 +9410,13 @@ W = angled&lt;p&gt;
 <text x="-45.72" y="53.34" size="1.778" layer="91">IMD</text>
 <text x="-45.72" y="55.88" size="1.778" layer="91">BMS</text>
 <text x="-45.72" y="50.8" size="1.778" layer="91">PCM</text>
-<text x="-149.86" y="-40.64" size="1.778" layer="91">Input from AIRS-1</text>
-<text x="-149.86" y="-45.72" size="1.778" layer="91">Input from AIRS-2</text>
 <text x="-142.24" y="-38.1" size="1.778" layer="91">TO AIRS-1</text>
-<text x="-154.94" y="-33.02" size="1.778" layer="91">TO EXTERNAL BTNS/SWS</text>
+<text x="-157.48" y="-33.02" size="1.778" layer="91">TO EXTERNAL BTNS/SWS</text>
 <text x="-147.32" y="-35.56" size="1.778" layer="91">IN FROM TSMS</text>
 <text x="-142.24" y="-43.18" size="1.778" layer="91">TO AIRS-2</text>
+<text x="7.62" y="106.68" size="1.778" layer="91">0.5A FUSE</text>
+<text x="-152.4" y="-40.64" size="1.778" layer="91">INPUT FROM AIRS-1</text>
+<text x="-152.4" y="-45.72" size="1.778" layer="91">INPUT FROM AIRS-2</text>
 </plain>
 <instances>
 <instance part="F1" gate="G$1" x="10.16" y="101.6"/>
