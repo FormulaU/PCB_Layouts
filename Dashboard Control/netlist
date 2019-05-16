@@ -1,0 +1,129 @@
+Netlist
+
+Exported from Shutdown Circuit.sch at 3/25/2018 9:42 PM
+
+EAGLE Version 8.4.1 Copyright (c) 1988-2017 Autodesk, Inc.
+
+Net           Part         Pad      Pin        Sheet
+
+APPS_BSE      OK1-TLP222AF 1        A          1
+              R12-30K      2        2          1
+              SV1          6        6          1
+              X2           6        S          1
+
+BMS           OK4-TLP222AF 1        A          1
+              R3-30K       2        2          1
+              SV1          3        3          1
+              X2           3        S          1
+
+BSPD          OK3-TLP222AF 1        A          1
+              R9-30K       2        2          1
+              X2           4        S          1
+
+FROM_BTNS     OK7-TLP222AF 4        COL        1
+              R4-1.2K      2        2          1
+              X3           4        S          1
+              X3           5        S          1
+
+GND           C1-440UF     2        2          1
+              R1-240       1        1          1
+              R10-240      1        1          1
+              R11-240      1        1          1
+              R12-30K      1        1          1
+              R13-30K      1        1          1
+              R14-240      1        1          1
+              R2-240       1        1          1
+              R3-30K       1        1          1
+              R5-30K       1        1          1
+              R6-240       1        1          1
+              R7-240       1        1          1
+              R8-30K       1        1          1
+              R9-30K       1        1          1
+              SV1          1        1          1
+              X1           1        S          1
+              X3           1        S          1
+              X3           3        S          1
+
+IMD           OK5-TLP222AF 1        A          1
+              R5-30K       2        2          1
+              SV1          2        2          1
+              X2           2        S          1
+
+N$1           OK1-TLP222AF 2        C          1
+              R7-240       2        2          1
+
+N$2           OK5-TLP222AF 3        EMIT       1
+              OK6-TLP222AF 4        COL        1
+
+N$3           OK4-TLP222AF 3        EMIT       1
+              OK5-TLP222AF 4        COL        1
+
+N$4           OK2-TLP222AF 2        C          1
+              R1-240       2        2          1
+
+N$5           OK3-TLP222AF 3        EMIT       1
+              OK4-TLP222AF 4        COL        1
+
+N$6           OK2-TLP222AF 3        EMIT       1
+              OK3-TLP222AF 4        COL        1
+
+N$7           OK1-TLP222AF 3        EMIT       1
+              OK2-TLP222AF 4        COL        1
+
+N$8           IC1-CD4093   3        O          1
+              IC2-CD4069   1        I          1
+              R8-30K       2        2          1
+
+N$9           OK3-TLP222AF 2        C          1
+              R10-240      2        2          1
+
+N$10          F1-0.5A      1        1          1
+              X1           2        S          1
+
+N$11          OK2-TLP222AF 1        A          1
+              R13-30K      2        2          1
+              X2           5        S          1
+
+N$12          OK4-TLP222AF 2        C          1
+              R11-240      2        2          1
+
+N$13          OK5-TLP222AF 2        C          1
+              R14-240      2        2          1
+
+N$14          OK6-TLP222AF 1        A          1
+              X2           1        S          1
+
+N$15          IC2-CD4069   2        O          1
+              OK7-TLP222AF 1        A          1
+
+N$16          OK6-TLP222AF 2        C          1
+              R2-240       2        2          1
+
+N$20-TLP222AF OK7-TLP222AF 2        C          1
+              R6-240       2        2          1
+
+N$21          C1-440UF     1        1          1
+              IC1-CD4093   2        I1         1
+              R4-1.2K      1        1          1
+
+PPD           SV1          5        5          1
+
+PSBD          SV1          4        4          1
+
+TO_AIRS_2     OK7-TLP222AF 3        EMIT       1
+              X3           2        S          1
+
+TO_BTNS       OK6-TLP222AF 3        EMIT       1
+              X3           6        S          1
+
+VCC           F1-0.5A      2        2          1
+              IC1-CD4093   1        I0         1
+              OK1-TLP222AF 4        COL        1
+              SV1          7        7          1
+
+VDD           IC1-CD4093   14       VDD        * none *
+              IC2-CD4069   14       VDD        * none *
+
+VSS           IC1-CD4093   7        VSS        * none *
+              IC2-CD4069   7        VSS        * none *
+
