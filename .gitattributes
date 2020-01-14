@@ -1,0 +1,5 @@
+*.sch binary
+*.s#* binary
+*.epf binary
+*.lbr binary
+*.l#* binary
