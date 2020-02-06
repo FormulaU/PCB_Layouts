@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NUCLEO-G431KB
+D NUCLEO-G431KB Development Board
+K STM32 STM32G4 STM32G431KB microcontroller module USB
+F https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/f7/3c/7f/d1/2a/1c/4f/65/DM00493601/files/DM00493601.pdf/jcr:content/translations/en.DM00493601.pdf
+$ENDCMP
+#
+#End Doc Library

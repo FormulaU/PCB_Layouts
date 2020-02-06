@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name BeeMS)(type Legacy)(uri /home/jochrist/repos/PCB_Layouts/BeeMS/BeeMS.lib)(options "")(descr ""))
+)
