@@ -1,4 +1,4 @@
-16925289044334818
+16926870835080818
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -286,6 +286,13 @@ battery CR-3032 coin cell vertical
 0
 2
 2
+BeeMS
+Half-U-Half-car-thresh
+Imported from Half-U-Half-car-thresh.svg
+svg2mod
+0
+0
+0
 BeeMS
 NUCLEO-G431KB
 NUCLEO-G431KB
