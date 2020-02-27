@@ -1,0 +1,13 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,MPN,Digi-Key_PN,fit_field
+1,NUCLEO-G431KB Development Board,NUCLEO-G431KB,A1,NUCLEO-G431KB,NUCLEO-G431KB,1,https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/f7/3c/7f/d1/2a/1c/4f/65/DM00493601/files/DM00493601.pdf/jcr:content/translations/en.DM00493601.pdf,NUCLEO-G431KB,497-19489-ND,
+2,Unpolarized capacitor,C,C2 C3 C4,0.1uF,C_1206_3216Metric_Pad1.42x1.75mm_HandSolder,3,~,885012208087,732-8127-1-ND,
+3,Unpolarized capacitor,C,C1,4.7nF,C_1206_3216Metric_Pad1.42x1.75mm_HandSolder,1,~,885012208079,732-8119-1-ND,
+4,Unpolarized capacitor,C,C5,47uF,C_1210_3225Metric_Pad1.42x2.65mm_HandSolder,1,~,RM32EC81C476KE15L,490-10531-1-ND,
+5,RGB LED with integrated controller,WS2812B,D1,WS2812B,LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,1,https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf,COM-11821,1568-1800-ND,
+6,"Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_02x10_Odd_Even,J6,Conn_02x10_Odd_Even,PinHeader_2x10_P2.54mm_Vertical,1,~,SFH11-PBPC-D10-ST-BK,S9197-ND,
+7,"RJ connector, 8P8C (8 positions 8 connected), Shielded",RJ45_Shielded,J1 J3,OUT_CONN,RJ45_Amphenol_RJHSE5380,2,~,RJHSE-5380,RJHSE-5380-ND,
+8,"50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23",BSS138,Q1 Q2,BSS138,SOT-23,2,https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf,BSS138CT,BSS138CT-ND,
+9,"Resistor, US symbol",R_US,R3 R4 R5 R6 R7,10k,R_1206_3216Metric,5,~,RC1206JR-0710KL,311-10KERCT-ND,
+10,"Resistor, US symbol",R_US,R1 R2,60,R_1206_3216Metric_Pad1.42x1.75mm_HandSolder,2,~,ERJ-P08J750V,P75ALCT-ND,
+11,"5 resistor network, star topology, bussed resistors, small US symbol",R_Network05_US,RN1,10k,R_Array_SIP6,1,http://www.vishay.com/docs/31509/csc.pdf,4606X-AP1-103LF,4606X-AP1-103LFTB-ND,
+12,"CAN FD Transceiver with Silent Mode, up to 8 Mbps, SOIC-8",MCP2558FD-xSN,U1,MCP2558FD-xSN,SOIC-8_3.9x4.9mm_P1.27mm,1,https://ww1.microchip.com/downloads/en/DeviceDoc/20005533A.pdf,MCP2558FD-H/SN-ND,MCP2558FD-H/SN,
