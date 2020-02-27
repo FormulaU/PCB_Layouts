@@ -1,0 +1,438 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR06
+U 1 1 5E432AE4
+P 6900 2500
+F 0 "#PWR06" H 6900 2350 50  0001 C CNN
+F 1 "+12V" H 6750 2500 50  0000 C CNN
+F 2 "" H 6900 2500 50  0001 C CNN
+F 3 "" H 6900 2500 50  0001 C CNN
+	1    6900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E434C49
+P 6600 2400
+F 0 "#PWR05" H 6600 2150 50  0001 C CNN
+F 1 "GND" H 6700 2400 50  0000 C CNN
+F 2 "" H 6600 2400 50  0001 C CNN
+F 3 "" H 6600 2400 50  0001 C CNN
+	1    6600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5E458772
+P 7850 3150
+F 0 "#PWR010" H 7850 2900 50  0001 C CNN
+F 1 "GND" H 8000 3100 50  0000 C CNN
+F 2 "" H 7850 3150 50  0001 C CNN
+F 3 "" H 7850 3150 50  0001 C CNN
+	1    7850 3150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7450 2750
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E8D6A7A
+P 6600 2200
+F 0 "#FLG01" H 6600 2275 50  0001 C CNN
+F 1 "PWR_FLAG" H 6350 2250 50  0000 C CNN
+F 2 "" H 6600 2200 50  0001 C CNN
+F 3 "~" H 6600 2200 50  0001 C CNN
+	1    6600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E8D8844
+P 6900 2700
+F 0 "#FLG02" H 6900 2775 50  0001 C CNN
+F 1 "PWR_FLAG" H 7150 2750 50  0000 C CNN
+F 2 "" H 6900 2700 50  0001 C CNN
+F 3 "~" H 6900 2700 50  0001 C CNN
+	1    6900 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:RJ45_Shielded J3
+U 1 1 5E98E99D
+P 7850 2650
+F 0 "J3" H 7520 2689 50  0000 R CNN
+F 1 "IN_CONN" H 7520 2598 50  0000 R CNN
+F 2 "Connector_RJ:RJ45_Amphenol_RJHSE5380" V 7850 2675 50  0001 C CNN
+F 3 "~" V 7850 2675 50  0001 C CNN
+F 4 "RJHSE-5380-ND" H 7850 2650 50  0001 C CNN "Digi-Key_PN"
+F 5 "RJHSE-5380" H 7850 2650 50  0001 C CNN "MPN"
+	1    7850 2650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2650 6900 2650
+Wire Wire Line
+	7450 2350 6600 2350
+Wire Wire Line
+	6050 2250 6300 2250
+Wire Wire Line
+	6600 2250 6600 2350
+Connection ~ 6600 2250
+Connection ~ 6600 2350
+Wire Wire Line
+	6600 2400 6600 2350
+Wire Wire Line
+	6900 2500 6900 2550
+Connection ~ 6900 2550
+Wire Wire Line
+	6900 2650 6900 2550
+Connection ~ 6900 2650
+Wire Wire Line
+	6600 2200 6600 2250
+Wire Wire Line
+	6900 2700 6900 2650
+$Comp
+L Device:C C5
+U 1 1 5E40173C
+P 6300 2400
+F 0 "C5" H 6415 2446 50  0000 L CNN
+F 1 "47uF" H 6415 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 6338 2250 50  0001 C CNN
+F 3 "~" H 6300 2400 50  0001 C CNN
+F 4 "490-10531-1-ND" H 6300 2400 50  0001 C CNN "Digi-Key_PN"
+F 5 "RM32EC81C476KE15L" H 6300 2400 50  0001 C CNN "MPN"
+	1    6300 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 6700 3000 3    50   BiDi ~ 0
+CAN_+
+Wire Wire Line
+	6700 2950 6850 2950
+Connection ~ 6700 2950
+Wire Wire Line
+	6700 3000 6700 2950
+Text GLabel 6850 3000 3    50   BiDi ~ 0
+CAN_-
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5E391A08
+P 8100 3800
+F 0 "J2" H 8180 3792 50  0000 L CNN
+F 1 "TERM" H 8180 3701 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8100 3800 50  0001 C CNN
+F 3 "~" H 8100 3800 50  0001 C CNN
+F 4 "" H 8100 3800 50  0001 C CNN "Digi-Key_PN"
+F 5 "" H 8100 3800 50  0001 C CNN "MPN"
+F 6 "DNF" H 8100 3800 50  0001 C CNN "fit_field"
+	1    8100 3800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3800 7850 3800
+$Comp
+L power:+12V #PWR03
+U 1 1 5E3A83D5
+P 7850 3650
+F 0 "#PWR03" H 7850 3500 50  0001 C CNN
+F 1 "+12V" H 7865 3823 50  0000 C CNN
+F 2 "" H 7850 3650 50  0001 C CNN
+F 3 "" H 7850 3650 50  0001 C CNN
+	1    7850 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3650 7850 3700
+Wire Wire Line
+	7850 3700 7900 3700
+$Comp
+L Device:R_US R3
+U 1 1 5E3A9278
+P 7850 4000
+F 0 "R3" H 7918 4046 50  0000 L CNN
+F 1 "10k" H 7918 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7890 3990 50  0001 C CNN
+F 3 "~" H 7850 4000 50  0001 C CNN
+F 4 "311-10KERCT-ND" H 7850 4000 50  0001 C CNN "Digi-Key_PN"
+F 5 "RC1206JR-0710KL" H 7850 4000 50  0001 C CNN "MPN"
+	1    7850 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3850 7850 3800
+Connection ~ 7850 3800
+Wire Wire Line
+	7850 3800 7900 3800
+$Comp
+L power:GND #PWR04
+U 1 1 5E3ADCB7
+P 7850 4200
+F 0 "#PWR04" H 7850 3950 50  0001 C CNN
+F 1 "GND" H 7855 4027 50  0000 C CNN
+F 2 "" H 7850 4200 50  0001 C CNN
+F 3 "" H 7850 4200 50  0001 C CNN
+	1    7850 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 4200 7850 4150
+Wire Wire Line
+	7750 3800 7750 4000
+Wire Wire Line
+	7750 3800 7750 3500
+Connection ~ 7750 3800
+Wire Wire Line
+	7350 3750 7350 3800
+Connection ~ 7350 3750
+Wire Wire Line
+	6850 3750 7350 3750
+Wire Wire Line
+	7350 3700 7350 3750
+Wire Wire Line
+	7350 3250 7350 3300
+Wire Wire Line
+	7350 4250 7350 4200
+$Comp
+L power:GND #PWR01
+U 1 1 5E683BEA
+P 6850 4150
+F 0 "#PWR01" H 6850 3900 50  0001 C CNN
+F 1 "GND" H 6855 3977 50  0000 C CNN
+F 2 "" H 6850 4150 50  0001 C CNN
+F 3 "" H 6850 4150 50  0001 C CNN
+	1    6850 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 5E380270
+P 7450 3500
+F 0 "Q1" H 7655 3546 50  0000 L CNN
+F 1 "BSS138" H 7655 3455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7650 3425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 7450 3500 50  0001 L CNN
+F 4 "BSS138CT-ND" H 7450 3500 50  0001 C CNN "Digi-Key_PN"
+F 5 "BSS138CT" H 7450 3500 50  0001 C CNN "MPN"
+	1    7450 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5E374D51
+P 7450 4000
+F 0 "Q2" H 7655 3954 50  0000 L CNN
+F 1 "BSS138" H 7655 4045 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7650 3925 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 7450 4000 50  0001 L CNN
+F 4 "BSS138CT-ND" H 7450 4000 50  0001 C CNN "Digi-Key_PN"
+F 5 "BSS138CT" H 7450 4000 50  0001 C CNN "MPN"
+	1    7450 4000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5E3660A2
+P 6850 3950
+F 0 "C1" H 6650 4000 50  0000 L CNN
+F 1 "4.7nF" H 6450 3900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6888 3800 50  0001 C CNN
+F 3 "~" H 6850 3950 50  0001 C CNN
+F 4 "732-8119-1-ND" H 6850 3950 50  0001 C CNN "Digi-Key_PN"
+F 5 "885012208079" H 6850 3950 50  0001 C CNN "MPN"
+	1    6850 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5E36584A
+P 7350 4400
+F 0 "R2" H 7418 4446 50  0000 L CNN
+F 1 "60" H 7418 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 7390 4390 50  0001 C CNN
+F 3 "~" H 7350 4400 50  0001 C CNN
+F 4 "P75ALCT-ND" H 7350 4400 50  0001 C CNN "Digi-Key_PN"
+F 5 "ERJ-P08J750V" H 7350 4400 50  0001 C CNN "MPN"
+	1    7350 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5E36531C
+P 7350 3100
+F 0 "R1" H 7418 3146 50  0000 L CNN
+F 1 "60" H 7418 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 7390 3090 50  0001 C CNN
+F 3 "~" H 7350 3100 50  0001 C CNN
+F 4 "P75ALCT-ND" H 7350 3100 50  0001 C CNN "Digi-Key_PN"
+F 5 "ERJ-P08J750V" H 7350 3100 50  0001 C CNN "MPN"
+	1    7350 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2950 6700 2950
+Wire Wire Line
+	6050 2850 6400 2850
+Connection ~ 7350 2950
+Wire Wire Line
+	7350 2950 7450 2950
+Wire Wire Line
+	6850 4150 6850 4100
+Wire Wire Line
+	6850 3800 6850 3750
+Wire Wire Line
+	7750 4000 7650 4000
+Wire Wire Line
+	7650 3500 7750 3500
+Wire Wire Line
+	7350 4550 6400 4550
+Wire Wire Line
+	6400 4550 6400 2850
+Connection ~ 6400 2850
+Wire Wire Line
+	6400 2850 6850 2850
+Wire Wire Line
+	6850 2950 6850 2850
+Connection ~ 6850 2950
+Wire Wire Line
+	6850 2950 7350 2950
+Connection ~ 6850 2850
+Wire Wire Line
+	6850 2850 7450 2850
+Wire Wire Line
+	6900 2550 6300 2550
+Wire Wire Line
+	6150 2550 6150 2450
+Wire Wire Line
+	6150 2450 6050 2450
+$Comp
+L dk_Barrel-Power-Connectors:PJ-102A J4
+U 1 1 5E73A2A9
+P 5950 2450
+F 0 "J4" H 5672 2326 50  0000 R CNN
+F 1 "PJ-102A" H 5672 2417 50  0000 R CNN
+F 2 "digikey-footprints:Barrel_Jack_5.5mmODx2.1mmID_PJ-102A" H 6150 2650 60  0001 L CNN
+F 3 "https://www.cui.com/product/resource/digikeypdf/pj-102a.pdf" H 6150 2750 60  0001 L CNN
+F 4 "CP-102A-ND" H 6150 2850 60  0001 L CNN "Digi-Key_PN"
+F 5 "PJ-102A" H 6150 2950 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 6150 3050 60  0001 L CNN "Category"
+F 7 "Barrel - Power Connectors" H 6150 3150 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/pj-102a.pdf" H 6150 3250 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/PJ-102A/CP-102A-ND/275425" H 6150 3350 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN PWR JACK 2X5.5MM SOLDER" H 6150 3450 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 6150 3550 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6150 3650 60  0001 L CNN "Status"
+	1    5950 2450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6050 2350 6050 2250
+Connection ~ 6050 2250
+$Comp
+L dk_Terminal-Blocks-Wire-to-Board:OSTTC020162 J1
+U 1 1 5E748291
+P 5850 2850
+F 0 "J1" V 5625 2933 50  0000 C CNN
+F 1 "OSTTC020162" V 5716 2933 50  0000 C CNN
+F 2 "digikey-footprints:Term_Block_1x2_P5mm" H 6050 3050 60  0001 L CNN
+F 3 "http://www.on-shore.com/wp-content/uploads/OSTTCXX0162.pdf" H 6050 3150 60  0001 L CNN
+F 4 "ED2600-ND" H 6050 3250 60  0001 L CNN "Digi-Key_PN"
+F 5 "OSTTC020162" H 6050 3350 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 6050 3450 60  0001 L CNN "Category"
+F 7 "Terminal Blocks - Wire to Board" H 6050 3550 60  0001 L CNN "Family"
+F 8 "http://www.on-shore.com/wp-content/uploads/OSTTCXX0162.pdf" H 6050 3650 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-shore-technology-inc/OSTTC020162/ED2600-ND/614549" H 6050 3750 60  0001 L CNN "DK_Detail_Page"
+F 10 "TERM BLK 2POS SIDE ENTRY 5MM PCB" H 6050 3850 60  0001 L CNN "Description"
+F 11 "On Shore Technology Inc." H 6050 3950 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6050 4050 60  0001 L CNN "Status"
+	1    5850 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5E7514B5
+P 6950 1700
+F 0 "H1" H 7050 1749 50  0000 L CNN
+F 1 "M" H 7050 1658 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 6950 1700 50  0001 C CNN
+F 3 "~" H 6950 1700 50  0001 C CNN
+	1    6950 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5E752C17
+P 7250 1700
+F 0 "H2" H 7350 1749 50  0000 L CNN
+F 1 "M" H 7350 1658 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 7250 1700 50  0001 C CNN
+F 3 "~" H 7250 1700 50  0001 C CNN
+	1    7250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5E7532AF
+P 7550 1700
+F 0 "H3" H 7650 1749 50  0000 L CNN
+F 1 "M" H 7650 1658 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 7550 1700 50  0001 C CNN
+F 3 "~" H 7550 1700 50  0001 C CNN
+	1    7550 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5E75363D
+P 7850 1700
+F 0 "H4" H 7950 1749 50  0000 L CNN
+F 1 "M" H 7950 1658 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad" H 7850 1700 50  0001 C CNN
+F 3 "~" H 7850 1700 50  0001 C CNN
+	1    7850 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 1800 7550 1800
+Connection ~ 7250 1800
+Wire Wire Line
+	7250 1800 6950 1800
+Connection ~ 7550 1800
+Wire Wire Line
+	7550 1800 7250 1800
+$Comp
+L power:GND #PWR0101
+U 1 1 5E767EF1
+P 7850 1850
+F 0 "#PWR0101" H 7850 1600 50  0001 C CNN
+F 1 "GND" H 7950 1850 50  0000 C CNN
+F 2 "" H 7850 1850 50  0001 C CNN
+F 3 "" H 7850 1850 50  0001 C CNN
+	1    7850 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 1850 7850 1800
+Connection ~ 7850 1800
+Connection ~ 6300 2250
+Wire Wire Line
+	6300 2250 6600 2250
+Connection ~ 6300 2550
+Wire Wire Line
+	6300 2550 6150 2550
+Wire Wire Line
+	6600 2250 7450 2250
+Wire Wire Line
+	6900 2550 7450 2550
+$EndSCHEMATC
