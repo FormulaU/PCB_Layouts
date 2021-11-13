@@ -70,6 +70,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
@@ -519,6 +520,38 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="ngspice-simulation" urn="urn:adsk.eagle:library:527439">
+<description>SPICE compatible library parts</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="0" urn="urn:adsk.eagle:symbol:527455/1" library_version="16">
+<description>Simulation ground symbol (spice node 0)</description>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<pin name="0" x="0" y="0" visible="off" length="point" direction="sup"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:527478/1" prefix="X_" library_version="16">
+<description>Simulation ground symbol (spice node 0)</description>
+<gates>
+<gate name="G$1" symbol="0" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="SPICEGROUND" value=""/>
+<attribute name="_EXTERNAL_" value=""/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -545,6 +578,8 @@
 <part name="JP4" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 <part name="CHASSIS_GND" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="X_1" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="X_2" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -564,6 +599,9 @@
 <wire x1="60.96" y1="-7.62" x2="60.96" y2="-15.24" width="0.1524" layer="95"/>
 <wire x1="60.96" y1="-15.24" x2="25.4" y2="-15.24" width="0.1524" layer="95"/>
 <wire x1="25.4" y1="-15.24" x2="25.4" y2="-7.62" width="0.1524" layer="95"/>
+<text x="91.44" y="83.82" size="1.778" layer="95">PRECHARGE RESISTOR</text>
+<text x="91.44" y="81.28" size="1.778" layer="95">1.2kΩ</text>
+<text x="91.44" y="78.74" size="1.778" layer="95">200W</text>
 </plain>
 <instances>
 <instance part="BAT1" gate="G$1" x="17.78" y="53.34" smashed="yes">
@@ -590,17 +628,17 @@
 <attribute name="NAME" x="76.2" y="55.88" size="1.778" layer="95"/>
 <attribute name="VALUE" x="76.2" y="49.53" size="1.778" layer="96"/>
 </instance>
-<instance part="K1" gate="1" x="76.2" y="106.68" smashed="yes">
-<attribute name="PART" x="77.47" y="111.76" size="1.778" layer="95"/>
+<instance part="K1" gate="1" x="78.74" y="106.68" smashed="yes">
+<attribute name="PART" x="80.01" y="111.76" size="1.778" layer="95"/>
 </instance>
-<instance part="K1" gate="2" x="86.36" y="104.14" smashed="yes">
-<attribute name="PART" x="88.9" y="104.14" size="1.778" layer="95"/>
+<instance part="K1" gate="2" x="88.9" y="104.14" smashed="yes">
+<attribute name="PART" x="91.44" y="104.14" size="1.778" layer="95"/>
 </instance>
-<instance part="K2" gate="1" x="63.5" y="83.82" smashed="yes">
-<attribute name="PART" x="64.77" y="88.9" size="1.778" layer="95"/>
+<instance part="K2" gate="1" x="68.58" y="83.82" smashed="yes">
+<attribute name="PART" x="69.85" y="88.9" size="1.778" layer="95"/>
 </instance>
-<instance part="K2" gate="2" x="73.66" y="81.28" smashed="yes">
-<attribute name="PART" x="76.2" y="81.28" size="1.778" layer="95"/>
+<instance part="K2" gate="2" x="78.74" y="81.28" smashed="yes">
+<attribute name="PART" x="81.28" y="81.28" size="1.778" layer="95"/>
 </instance>
 <instance part="K3" gate="1" x="0" y="91.44" smashed="yes">
 <attribute name="PART" x="1.27" y="96.52" size="1.778" layer="95"/>
@@ -608,7 +646,7 @@
 <instance part="K3" gate="2" x="10.16" y="88.9" smashed="yes">
 <attribute name="PART" x="12.7" y="88.9" size="1.778" layer="95"/>
 </instance>
-<instance part="R1" gate="G$1" x="86.36" y="81.28" smashed="yes" rot="R90"/>
+<instance part="R1" gate="G$1" x="88.9" y="81.28" smashed="yes" rot="R90"/>
 <instance part="JP1" gate="A" x="22.86" y="63.5" smashed="yes">
 <attribute name="NAME" x="21.59" y="63.5" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="28.575" y="63.5" size="1.778" layer="96" rot="R90"/>
@@ -631,6 +669,8 @@
 <instance part="P+1" gate="VCC" x="22.86" y="7.62" smashed="yes" rot="R90">
 <attribute name="VALUE" x="25.4" y="5.08" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="X_1" gate="G$1" x="71.12" y="116.84" smashed="yes"/>
+<instance part="X_2" gate="G$1" x="63.5" y="91.44" smashed="yes"/>
 </instances>
 <busses>
 <bus name="B$1">
@@ -741,21 +781,6 @@
 <label x="27.94" y="15.24" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="LINE-" class="0">
-<segment>
-<pinref part="F1" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="53.34" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="15.24" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
-<label x="58.42" y="15.24" size="1.778" layer="95" rot="R90" xref="yes"/>
-<wire x1="86.36" y1="76.2" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
-<junction x="86.36" y="53.34"/>
-<pinref part="K2" gate="2" pin="P"/>
-<wire x1="86.36" y1="71.12" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="78.74" x2="73.66" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
-<junction x="86.36" y="71.12"/>
-</segment>
-</net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="K3" gate="2" pin="P"/>
@@ -764,21 +789,12 @@
 </net>
 <net name="TO_PRECHARGE" class="0">
 <segment>
-<pinref part="K3" gate="1" pin="1"/>
-<wire x1="0" y1="96.52" x2="0" y2="99.06" width="0.1524" layer="91"/>
-<label x="0" y="99.06" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
 <pinref part="K2" gate="1" pin="2"/>
-<wire x1="63.5" y1="76.2" x2="63.5" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="76.2" x2="68.58" y2="78.74" width="0.1524" layer="91"/>
+<label x="68.58" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="TO_AIR1" class="0">
-<segment>
-<pinref part="K3" gate="1" pin="2"/>
-<wire x1="0" y1="86.36" x2="0" y2="83.82" width="0.1524" layer="91"/>
-<label x="0" y="83.82" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
 <segment>
 <wire x1="27.94" y1="-15.24" x2="27.94" y2="-17.78" width="0.1524" layer="91"/>
 <label x="27.94" y="-17.78" size="2.54" layer="95" rot="R270" xref="yes"/>
@@ -787,22 +803,18 @@
 <net name="TO_HVD+" class="0">
 <segment>
 <pinref part="K3" gate="2" pin="S"/>
-<wire x1="5.08" y1="93.98" x2="5.08" y2="119.38" width="0.1524" layer="91"/>
-<label x="5.08" y="119.38" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="5.08" y1="93.98" x2="5.08" y2="104.14" width="0.1524" layer="91"/>
+<label x="5.08" y="104.14" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TO_HVD-" class="0">
 <segment>
 <pinref part="K1" gate="2" pin="S"/>
-<wire x1="81.28" y1="109.22" x2="81.28" y2="124.46" width="0.1524" layer="91"/>
-<label x="81.28" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="83.82" y1="109.22" x2="83.82" y2="124.46" width="0.1524" layer="91"/>
+<label x="83.82" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="FROM_AIR1" class="0">
-<segment>
-<pinref part="K2" gate="1" pin="1"/>
-<wire x1="63.5" y1="88.9" x2="63.5" y2="91.44" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <wire x1="33.02" y1="-15.24" x2="33.02" y2="-17.78" width="0.1524" layer="91"/>
 <label x="33.02" y="-17.78" size="2.54" layer="95" rot="R270" xref="yes"/>
@@ -810,21 +822,20 @@
 </net>
 <net name="TO_AIR2" class="0">
 <segment>
-<pinref part="K1" gate="1" pin="2"/>
-<wire x1="76.2" y1="101.6" x2="76.2" y2="99.06" width="0.1524" layer="91"/>
-<label x="76.2" y="99.06" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <wire x1="38.1" y1="-15.24" x2="38.1" y2="-17.78" width="0.1524" layer="91"/>
 <label x="38.1" y="-17.78" size="2.54" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="K3" gate="1" pin="1"/>
+<wire x1="0" y1="96.52" x2="0" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="0" y1="109.22" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="109.22" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="K1" gate="1" pin="2"/>
+<wire x1="78.74" y1="101.6" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="99.06" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="FROM_AIR2" class="0">
-<segment>
-<pinref part="K1" gate="1" pin="1"/>
-<wire x1="76.2" y1="111.76" x2="76.2" y2="114.3" width="0.1524" layer="91"/>
-<label x="76.2" y="114.3" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <wire x1="43.18" y1="-15.24" x2="43.18" y2="-17.78" width="0.1524" layer="91"/>
 <label x="43.18" y="-17.78" size="2.54" layer="95" rot="R270" xref="yes"/>
@@ -880,12 +891,51 @@
 <net name="N$10" class="0">
 <segment>
 <pinref part="K1" gate="2" pin="P"/>
-<wire x1="86.36" y1="86.36" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="86.36" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="K2" gate="2" pin="S"/>
-<wire x1="86.36" y1="91.44" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="86.36" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
-<junction x="86.36" y="91.44"/>
+<wire x1="88.9" y1="91.44" x2="88.9" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="86.36" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
+<junction x="88.9" y="91.44"/>
+</segment>
+</net>
+<net name="FROM_BTNS" class="0">
+<segment>
+<pinref part="K3" gate="1" pin="2"/>
+<wire x1="0" y1="86.36" x2="0" y2="83.82" width="0.1524" layer="91"/>
+<label x="0" y="83.82" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="LINE-" class="0">
+<segment>
+<pinref part="K2" gate="2" pin="P"/>
+<wire x1="78.74" y1="78.74" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="F1" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="53.34" x2="88.9" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="53.34" x2="88.9" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="15.24" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="53.34" x2="88.9" y2="73.66" width="0.1524" layer="91"/>
+<junction x="88.9" y="53.34"/>
+<wire x1="88.9" y1="73.66" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="73.66" x2="88.9" y2="73.66" width="0.1524" layer="91"/>
+<junction x="88.9" y="73.66"/>
+<label x="58.42" y="15.24" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+</net>
+<net name="0" class="0">
+<segment>
+<pinref part="K1" gate="1" pin="1"/>
+<wire x1="78.74" y1="111.76" x2="78.74" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="X_1" gate="G$1" pin="0"/>
+<wire x1="78.74" y1="119.38" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="119.38" x2="71.12" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="K2" gate="1" pin="1"/>
+<wire x1="68.58" y1="88.9" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="93.98" x2="63.5" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="X_2" gate="G$1" pin="0"/>
+<wire x1="63.5" y1="93.98" x2="63.5" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
